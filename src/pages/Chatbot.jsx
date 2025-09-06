@@ -207,7 +207,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-hero">
+    <div className="min-h-screen bg-gradient-hero relative">{/* Updated with relative positioning */}
       <Navigation />
 
       {/* Header with Reset Button */}
@@ -236,41 +236,41 @@ const Chatbot = () => {
           {/* Quick Actions */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 animate-fade-in">
             <Card
-              className="cursor-pointer hover:shadow-gentle transition-all border-0 bg-card/50 backdrop-blur-sm"
+              className="cursor-pointer hover:shadow-gentle transition-all border-0 bg-card shadow-calm"
               onClick={startAssessment}
             >
-              <CardContent className="p-4 text-center">
-                <Heart className="w-8 h-8 text-primary mx-auto mb-2" />
-                <h3 className="font-medium">Wellness Assessment</h3>
+              <CardContent className="p-6 text-center">
+                <Heart className="w-10 h-10 text-primary mx-auto mb-3 animate-breathe" />
+                <h3 className="font-semibold text-lg mb-2">Wellness Assessment</h3>
                 <p className="text-sm text-muted-foreground">Quick check-in on your mental health</p>
               </CardContent>
             </Card>
 
             <Card
-              className="cursor-pointer hover:shadow-gentle transition-all border-0 bg-card/50 backdrop-blur-sm"
+              className="cursor-pointer hover:shadow-gentle transition-all border-0 bg-card shadow-calm"
               onClick={() => navigate('/library')}
             >
-              <CardContent className="p-4 text-center">
-                <Music className="w-8 h-8 text-secondary mx-auto mb-2" />
-                <h3 className="font-medium">Wellness Library</h3>
+              <CardContent className="p-6 text-center">
+                <Music className="w-10 h-10 text-secondary mx-auto mb-3 animate-breathe" />
+                <h3 className="font-semibold text-lg mb-2">Wellness Library</h3>
                 <p className="text-sm text-muted-foreground">Calming music and sounds</p>
               </CardContent>
             </Card>
 
             <Card
-              className="cursor-pointer hover:shadow-gentle transition-all border-0 bg-card/50 backdrop-blur-sm"
+              className="cursor-pointer hover:shadow-gentle transition-all border-0 bg-card shadow-calm"
               onClick={() => navigate('/dashboard')}
             >
-              <CardContent className="p-4 text-center">
-                <BarChart3 className="w-8 h-8 text-accent mx-auto mb-2" />
-                <h3 className="font-medium">Progress Dashboard</h3>
+              <CardContent className="p-6 text-center">
+                <BarChart3 className="w-10 h-10 text-accent mx-auto mb-3 animate-breathe" />
+                <h3 className="font-semibold text-lg mb-2">Progress Dashboard</h3>
                 <p className="text-sm text-muted-foreground">Track your wellness journey</p>
               </CardContent>
             </Card>
           </div>
 
           {/* Chat Interface */}
-          <Card className="shadow-calm border-0 h-96">
+          <Card className="shadow-calm border-0 h-96 bg-card">{/* Added bg-card for better visibility */}
             <CardHeader className="pb-3">
               <CardTitle className="flex items-center space-x-2 text-lg">
                 <Bot className="w-5 h-5 text-primary animate-breathe" />
